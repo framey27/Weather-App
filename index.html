@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="border">
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="search for a city"
+            autofocus="on"
+            autocomplete="off"
+            id="search-text-input"
+          />
+          <input type="submit" value="search" />
+        </form>
+
+        <br />
+        <h1>London</h1>
+        <ul>
+          <li class="date">Saturday, 18:14</li>
+          <li>Partly Cloudy</li>
+        </ul>
+        <hr />
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="cloudy img"
+                class="cloudy"
+              />
+              <div class="float-left">
+                <span class="temp" id="weather">19</span
+                ><span id="degrees"><a href="#">°C</a></span> |
+                <span id="fahrenheit"><a href="#">°F</a></span>
+              </div>
+            </div>
+          </div>
+          <ul>
+            <li>Precipitation: 0%</li>
+            <li>Humidity: 71%</li>
+            <li>Wind: 5mph</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
