@@ -51,6 +51,7 @@ function getCurrentPosition(event) {
 let button = document.querySelector("#position");
 button.addEventListener("click", getCurrentPosition);
 
+
 function displayTemp(response) {
   let currentTemperature = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#weather");
@@ -58,3 +59,5 @@ function displayTemp(response) {
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = response.data.name;
 }
+
+axios.get(apiUrl).then(displayTemp);
