@@ -23,6 +23,26 @@ if (minutes < 10) {
 
 dates.innerHTML = `${day}, ${time}:${minutes}`;
 
+function fahrenheit(event) {
+  event.preventDefault();
+  let toFahrenheit = document.querySelector("#weather");
+  toFahrenheit.innerHTML = 63;
+}
+
+let fahrenheitClick = document.querySelector(".fahrenheit");
+fahrenheitClick.addEventListener("click", fahrenheit);
+
+function celsius(response) {
+  let toCelsius = document.querySelector("#weather");
+  toCelsius.innerHTML = response.data.main.temp;
+}
+
+let celsiusClick = document.querySelector(".celsius");
+celsiusClick.addEventListener("click", celsius);
+
+
+
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
@@ -54,7 +74,7 @@ button.addEventListener("click", getCurrentPosition);
 function displayTemp(response) {
   let currentTemperature = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#weather");
-  temperature.innerHTML = `${currentTemperature}°C`;
+  temperature.innerHTML = `${currentTemperature}`;
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = response.data.name;
 }
